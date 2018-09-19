@@ -3,11 +3,6 @@ resource "aws_alb" "alb-webapplication" {
   name            = "webapplication"
   subnets         = ["${var.alb_public_subnets}"]
   security_groups = ["${aws_security_group.alb-webapplication-external_sg.id}"]
-
-  access_logs {
-    bucket  = "${aws_s3_bucket.webapp-elb-logs.id}"
-    enabled = true
-  }
 }
 
 resource "aws_acm_certificate" "cert" {
