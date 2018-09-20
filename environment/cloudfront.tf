@@ -61,3 +61,7 @@ resource "aws_cloudfront_distribution" "site" {
 resource "aws_cloudfront_origin_access_identity" "origin_access_identity" {
   comment = "Origin Access Identity for S3"
 }
+
+data "aws_route53_zone" "primary" {
+  name = "${var.hosted_zone}"
+}
