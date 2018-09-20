@@ -11,6 +11,7 @@ resource "aws_cloudfront_distribution" "site" {
     }
   }
 
+  #this was plan b to enable ssl.
   viewer_certificate {
     cloudfront_default_certificate = true
   }

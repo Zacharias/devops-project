@@ -1,0 +1,6 @@
+aws_region          = "us-east-1"
+s3_bucket_name      = "#"
+s3_bucket_env       = "#"
+domain              = "#"
+subdomain           = "#"
+hosted_zone         = "#"
