@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "73c36c68-4c94-ca79-ecb1-a04e8c743bcf",
+		"name": "MyCoolCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": " d2ysurhkixaycu.cloudfront.net",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3e6e6888-b6d6-4de0-8a7f-79e1e7eb9429",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 301\", function () {",
+							"    pm.response.to.have.status(301);",
+							"});",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Moved\");",
+							"});",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://d2ysurhkixaycu.cloudfront.net",
+					"protocol": "http",
+					"host": [
+						"d2ysurhkixaycu",
+						"cloudfront",
+						"net"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://d2ysurhkixaycu.cloudfront.net",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "542e38f0-9904-433d-9d37-6958b16dd2ac",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"World\");",
+							"});",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://d2ysurhkixaycu.cloudfront.net",
+					"protocol": "https",
+					"host": [
+						"d2ysurhkixaycu",
+						"cloudfront",
+						"net"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
