@@ -3,7 +3,7 @@
 I'm choosing to host the content from S3. I chose S3 because it is free-tier, serverless (which means less security surface area), and fast. If there isn't a server to hack into, if something's amiss on the perimeter, there's a very small blast radius. Given the time budget of one hour, I decided not to spin up a fargate task and associated IAM roles, although I really like working with ALBs nowadays.
  
 https://demo.2628collins.com (has ssl errors because I'm using the cloudformation ssl template)
-http://http://d2ysurhkixaycu.cloudfront.net redirects to https
+http://d2ysurhkixaycu.cloudfront.net redirects to https
 https://d2ysurhkixaycu.cloudfront.net works
 
 ## Reproducing in your own AWS environment
